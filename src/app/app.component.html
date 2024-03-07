@@ -1,5 +1,4 @@
-<div 
-class="min-w-screen
+<div class="min-w-screen
 min-h-screen
 bg-teal-900
 flex
@@ -17,16 +16,366 @@ py-5">
     overflow-hidden" style="max-width: 350px">
 
         <h1 class="text-center text-white  py-10 text-3xl font-bold">Angular Calculator</h1>
-    
+
         <!--  Calculator Screen  -->
         <div class="w-full
         h-40
         bg-gradient-to-b
         from-gray-800
-        from-gray-700
-        text-right"> 
+        to-gray-700
+        text-right">
+
+            <!-- Function Screen  -->
+            <div class="w-full
+                    py-5 
+                    px-6
+                    text-2xl
+                    text-white
+                    font-thin">
+                {{funcT}}
+            </div>
+
+            <!-- Number Screen -->
+            <div class="w-full
+                        py-5 
+                        px-6
+                        text-6xl
+                        text-white
+                        font-thin">
+                {{calValue | number}}
+            </div>
 
         </div>
+        <!-- End Calculator Screen  -->
+
+        <!-- Calculator Button Area -->
+        <div class="w-full
+        bg-gradient-to-b
+        from-teal-500
+        to-teal-800">
+
+            <!--  First  Button Row  -->
+            <div class=" flex w-full">
+                
+                <!--  Clear Button  -->
+                <div class="w-2/4 border-r border-b border-teal-500">
+                    <button class="w-full
+                            h-16
+                            outline-none
+                            hover:bg-teal-700
+                            hover:bg-opacity-20
+                            text-white
+                            text-2xl
+                            font-light">
+                        C
+                    </button>
+                    
+                </div>
+                <!-- End Clear Button-->
+
+                <!-- Percentage Button -->
+                <div class="w-1/4 border-r border-b border-teal-500">
+                    <button class="w-full
+                            h-16
+                            outline-none
+                            focus:outline-none
+                            hover:bg-teal-700
+                            hover:bg-opacity-20
+                            text-xl
+                            text-white
+                            font-light">
+                        %
+                    </button>
+                </div>
+                <!-- End Percentage Button  -->
+
+                <!--  Division Button -->
+                <div class="w-1/4 border-r border-b border-teal-500">
+                    <button class="w-full
+                            h-16
+                            outline-none
+                            focus:outline-none
+                            hover:bg-teal-700
+                            hover:bg-opacity-20
+                            text-xl
+                            text-white
+                            font-light">
+                        /
+                    </button>
+                </div>
+                <!-- End Division Button  -->
+
+            </div>
+            <!-- End First Button Row -->
+
+
+            <!-- Second Button Row  -->
+            <div class="flex w-full">
+
+                <!-- Number 7 Button -->
+                <div class="w-1/4 border-r border-b border-teal-500">
+                        <button class="w-full
+                            h-16
+                            outline-none
+                            focus:outline-none
+                            hover:bg-teal-700
+                            hover:bg-opacity-20
+                            text-xl
+                            text-white
+                            font-light">
+                        7
+                    </button>
+                </div>
+                <!-- End Number 7 Button  -->
+                
+                <!-- Number 8 Button -->
+                <div class="w-1/4 border-r border-b border-teal-500">
+                        <button class="w-full
+                            h-16
+                            outline-none
+                            focus:outline-none
+                            hover:bg-teal-700
+                            hover:bg-opacity-20
+                            text-xl
+                            text-white
+                            font-light">
+                        8
+                    </button>
+                </div>
+                <!-- End Number 8 Button  -->
+                
+                <!-- Number 9 Button -->
+                <div class="w-1/4 border-r border-b border-teal-500">
+                        <button class="w-full
+                            h-16
+                            outline-none
+                            focus:outline-none
+                            hover:bg-teal-700
+                            hover:bg-opacity-20
+                            text-xl
+                            text-white
+                            font-light">
+                        9
+                    </button>
+                </div>
+                <!-- End Number 9 Button  -->
+
+                <!-- Multiplication Button -->
+                <div class="w-1/4 border-r border-b border-teal-500">
+                        <button class="w-full
+                            h-16
+                            outline-none
+                            focus:outline-none
+                            hover:bg-teal-700
+                            hover:bg-opacity-20
+                            text-xl
+                            text-white
+                            font-light">
+                        *
+                    </button>
+                </div>
+                <!-- End Multiplication Button  -->
+
+            </div>
+            <!-- End Second Button Row -->
+
+
+            <!-- Third Button Row  -->
+            <div class="flex w-full">
+
+                <!-- Number 4 Button -->
+                <div class="w-1/4 border-r border-b border-teal-500">
+                        <button class="w-full
+                            h-16
+                            outline-none
+                            focus:outline-none
+                            hover:bg-teal-700
+                            hover:bg-opacity-20
+                            text-xl
+                            text-white
+                            font-light">
+                        4
+                    </button>
+                </div>
+                <!-- End Number 4 Button  -->
+                
+                <!-- Number 5 Button -->
+                <div class="w-1/4 border-r border-b border-teal-500">
+                        <button class="w-full
+                            h-16
+                            outline-none
+                            focus:outline-none
+                            hover:bg-teal-700
+                            hover:bg-opacity-20
+                            text-xl
+                            text-white
+                            font-light">
+                        5
+                    </button>
+                </div>
+                <!-- End Number 5 Button  -->
+                
+                <!-- Number 6 Button -->
+                <div class="w-1/4 border-r border-b border-teal-500">
+                        <button class="w-full
+                            h-16
+                            outline-none
+                            focus:outline-none
+                            hover:bg-teal-700
+                            hover:bg-opacity-20
+                            text-xl
+                            text-white
+                            font-light">
+                        6
+                    </button>
+                </div>
+                <!-- End Number 6 Button  -->
+
+                <!-- Minus Button -->
+                <div class="w-1/4 border-r border-b border-teal-500">
+                        <button class="w-full
+                            h-16
+                            outline-none
+                            focus:outline-none
+                            hover:bg-teal-700
+                            hover:bg-opacity-20
+                            text-xl
+                            text-white
+                            font-light">
+                        -
+                    </button>
+                </div>
+                <!-- End Minus Button  -->
+
+            </div>
+            <!-- End Third Button Row -->
+
+
+            <!-- Fourth Button Row  -->
+            <div class="flex w-full">
+
+                <!-- Number 1 Button -->
+                <div class="w-1/4 border-r border-b border-teal-500">
+                        <button class="w-full
+                            h-16
+                            outline-none
+                            focus:outline-none
+                            hover:bg-teal-700
+                            hover:bg-opacity-20
+                            text-xl
+                            text-white
+                            font-light">
+                        1
+                    </button>
+                </div>
+                <!-- End Number 1 Button  -->
+                
+                <!-- Number 2 Button -->
+                <div class="w-1/4 border-r border-b border-teal-500">
+                        <button class="w-full
+                            h-16
+                            outline-none
+                            focus:outline-none
+                            hover:bg-teal-700
+                            hover:bg-opacity-20
+                            text-xl
+                            text-white
+                            font-light">
+                        2
+                    </button>
+                </div>
+                <!-- End Number 2 Button  -->
+                
+                <!-- Number 3 Button -->
+                <div class="w-1/4 border-r border-b border-teal-500">
+                        <button class="w-full
+                            h-16
+                            outline-none
+                            focus:outline-none
+                            hover:bg-teal-700
+                            hover:bg-opacity-20
+                            text-xl
+                            text-white
+                            font-light">
+                        3
+                    </button>
+                </div>
+                <!-- End Number 3 Button  -->
+
+                <!-- Plus Button -->
+                <div class="w-1/4 border-r border-b border-teal-500">
+                        <button class="w-full
+                            h-16
+                            outline-none
+                            focus:outline-none
+                            hover:bg-teal-700
+                            hover:bg-opacity-20
+                            text-xl
+                            text-white
+                            font-light">
+                        +
+                    </button>
+                </div>
+                <!-- End Plus Button  -->
+
+            </div>
+            <!-- End Fourth Button Row  -->
+
+
+            <!-- Fifth Button Row -->
+            <div class="flex w-full">
+                
+                <!-- Number 0 Button -->
+                <div class="w-1/4 border-r border-teal-500">
+                    <button class="w-full
+                            h-16
+                            outline-none
+                            hover:bg-teal-700
+                            hover:bg-opacity-20
+                            text-white
+                            text-xl
+                            font-light">
+                        0
+                    </button>    
+                </div>
+                <!--  End 0 Button  -->
+
+                <!--  Decimal Button  -->
+                <div class="w-1/4 border-r border-teal-500">
+                    <button class="w-full
+                            h-16
+                            outline-none
+                            hover:bg-teal-700
+                            hover:bg-opacity-20
+                            text-white
+                            text-xl
+                            font-light">
+                        .
+                    </button>    
+                </div>
+                <!--  End Decimal Button  -->
+                
+                <!--  Equal Sign Button  -->
+                <div class="w-2/4 border-r border-teal-500">
+                    <button class="w-full
+                            h-16
+                            outline-none
+                            hover:bg-teal-700
+                            hover:bg-opacity-20
+                            text-white
+                            text-xl
+                            font-light">
+                        =
+                    </button>    
+                </div>
+                <!--  End Equal Sign Button  -->
+
+            </div>
+            <!-- End Fifth Button Row  -->
+
+        </div>
+        <!-- End Calculator Button Area -->
+
 
     </div>
 
