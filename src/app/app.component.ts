@@ -21,6 +21,8 @@ export class AppComponent {
     firstNumber: number = 0;
     secondNumber: number = 0;
 
+
+
     onClickValue(val : string, type: any) {
         console.log(val, type);
         if (type == 'number') {
@@ -42,18 +44,23 @@ export class AppComponent {
     }
 
     onFunctionClick(val : string) {
-        if (this.funcT == 'NoFunction') {
+        if (val == 'c') {
+            this.clearAll();
+        }
+        else if (this.funcT == 'NoFunction' || this.funcT == '=') {
             this.firstNumber = this.calValue;
             this.calValue = 0;
             this.calNumber = 'noValue';
             this.funcT = val;
-        }
+        }        
         else if (this.funcT != 'NoFunction') {
-            this.secondNumber = this.calValue;            
-            // calculation
-            this.valueCalculate(val);
-        }
+                this.secondNumber = this.calValue;            
+                // calculation
+                this.valueCalculate(val);
+        }   
     }
+    
+    
 
 
 
@@ -66,23 +73,25 @@ export class AppComponent {
         else if (this.funcT == '-') {
             const Total = this.firstNumber - this.secondNumber;
             this.totalAssignValues(Total, val);
-            if (val == '=') { this.onEqualPress };
+            if (val == '=') { this.onEqualPress};
         }
         else if (this.funcT == '*') {
             const Total = this.firstNumber * this.secondNumber;
             this.totalAssignValues(Total, val);
-            if (val == '=') { this.onEqualPress };
+            if (val == '=') {
+                this.onEqualPress
+            }
+            else if (val == '%') {
+                this.calValue = Total / 100;
+            };            
         }
         else if (this.funcT == '/') {
             const Total = this.firstNumber / this.secondNumber;
             this.totalAssignValues(Total, val);
-            if (val == '=') { this.onEqualPress };
+            if (val == '=') { this.onEqualPress};
         }
-        else if (this.funcT == '%') {
-            const Total = this.calValue / 100;
-            console.log(Total);
-            this.onEqualPress();
-        }
+
+
     }
 
 
@@ -98,6 +107,14 @@ export class AppComponent {
     onEqualPress() {
         this.firstNumber = 0;
         this.secondNumber = 0;
+        this.funcT = 'NoFunction';
+        this.calNumber = 'noValue';
+    }
+
+    clearAll() {
+        this.firstNumber = 0;
+        this.secondNumber = 0; 
+        this.calValue = 0;
         this.funcT = 'NoFunction';
         this.calNumber = 'noValue';
     }
